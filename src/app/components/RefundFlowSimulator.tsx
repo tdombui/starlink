@@ -97,7 +97,7 @@ export default function RefundFlowSimulator() {
               onChange={handleChange}
               className="w-full p-2 bg-black border border-white/20 rounded"
             >
-              <option>PayPal >180 days</option>
+              <option>PayPal &gt; 180 days</option>
               <option>Bank transfer error</option>
               <option>Incorrect payout method</option>
               <option>Other</option>
@@ -119,9 +119,9 @@ export default function RefundFlowSimulator() {
         <div className="bg-white/5 border border-white/10 p-4 rounded-xl shadow-md flex-1">
           <h3 className="text-2xl font-semibold mb-2">Instructions</h3>
           <ul className="list-disc text-sm text-white/80 pl-5 space-y-1">
-            <li>Agents fill out the refund form for failed transactions (e.g. PayPal >180 days).</li>
+            <li>Agents fill out the refund form for failed transactions (e.g. PayPal &gt; 180 days).</li>
             <li>Submissions appear in the Team Lead dashboard.</li>
-            <li>Team Leads review and click "Process Refund" after validation.</li>
+            <li>Team Leads review and click &#34;Process Refund&#34; after validation.</li>
             <li>Processed refunds populate a Finance-ready spreadsheet view for vendor reconciliation.</li>
           </ul>
         </div>
