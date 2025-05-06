@@ -17,7 +17,7 @@ export default function RefundFlowSimulator() {
     orderId: '' as string | number,
     amount: '' as string | number,
     reason: 'PayPal >180 days',
-    email: 'johnnyappleseed@spacex.com',
+    email: 'j_appleseed@spacex.com',
     merchantId: '' as string | number
   });
   
@@ -47,7 +47,7 @@ export default function RefundFlowSimulator() {
       orderId: '',
       amount: '',
       reason: 'PayPal >180 days',
-      email: 'johnnyappleseed@spacex.com',
+      email: 'j_appleseed@spacex.com',
       merchantId: ''
     });
   };
@@ -144,7 +144,7 @@ export default function RefundFlowSimulator() {
                 <th className="py-2 pr-4">Order ID</th>
                 <th className="py-2 pr-4">Amount</th>
                 <th className="py-2 pr-4">Reason</th>
-                <th className="py-2 pr-4">Email</th>
+                <th className="py-2 pr-4">Customer Email</th>
                 <th className="py-2 pr-4">Merchant ID</th>
                 <th className="py-2 pr-4">Status</th>
                 <th className="py-2">Timestamp</th>
