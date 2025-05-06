@@ -14,10 +14,11 @@ export default function PaypalApiLogAccordion({
     : '2023-09-04T10:32:17Z';
 
   const logData = `{
+  "payee_id": "95488",
   "transaction_id": "9AG18374",
   "status": "FAILED",
   "error_code": "REFUND_FAILED",
-  "customer_email": "johnny_appleseed@spacex.com",
+  "customer_email": "j_appleseed@spacex.com",
   "error_message": "Refund not successful. Transaction older than 180 days.",
   "timestamp": "${timestampISO}"
 }`;

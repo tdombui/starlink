@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useActiveSection } from "@/hooks/useActiveSelection";
 import LightboxImage from '@/app/components/LightboxImage';
 import RefundSimulator from '@/app/components/RefundSimulator';
+import RefundFlowSimulator from '@/app/components/RefundFlowSimulator';
 
 function ScrollLink({
   href,
@@ -416,6 +417,8 @@ Due to a limitation in a legacy PayPal integration, refunds for orders older tha
       </li> 
       <li><a className="font-black">Testing & Iteration</a>: Soft launch with a small group of agents. Gathered feedback to refine the form structure, error handling, and agent instructions. Simplified input fields, clarified edge cases, and confirmed the process aligned with Finance’s requirements.</li>  
     </ul>
+      <br/>
+      <RefundFlowSimulator /> 
       <br/>
 
             {/* TIMELINE */}
