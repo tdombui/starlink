@@ -73,7 +73,7 @@ export default function Home() {
 </nav>
 <div className="pl-12 pr-8 sm:pl-40 md:pl-44 lg:pl-40 w-full">
 
-<main className="pt-[10rem] pl-20 pr-4 sm:pl-24 max-w-3xl mx-auto">
+<main className="pt-[10rem] pl-20 pr-4 sm:pl-16 max-w-3xl mx-auto">
   
     {/* Top Navbar */}
     <nav className="fixed top-0 left-0 w-full z-40 border-b border-white/10 px-4 py-3 flex flex-col items-center text-left bg-[rgba(0,0,0,0.9)] shadow-black/60 shadow-md backdrop-blur">
@@ -129,6 +129,20 @@ export default function Home() {
     <p>
       I thrive in fast-paced, technical environments and bring a bias for action, clarity, and continuous improvement—especially when the stakes are high and the mission is bold.
     </p>
+    <br/>
+
+            {/* TIMELINE */}
+            <h3 className="text-xl font-semibold mb-1">🏅Achievements </h3>
+      <ul className="text-lg list-disc ml-6 text-md opacity-80 space-y-1 mt-2">
+        <li>Launched and scaled a BPO call center from 0 to 60+ agents at Back Market during peak COVID; maintained &gt; 80% CSAT across 1,000+ daily tickets while reducing agent turnover to &lt; 35%.</li> 
+        <li>Reduced false-positive product returns by 5–7% (impacting $30K–$60K/month in GMV) by partnering with QA, Training and Engineering to create internal tooling and Knowledge Base, customer-facing guides, and an agent training module.</li>
+        <li>Led promotional sale with Sony partnership during Black Friday—product sold out in 2 weeks and generated $220,000+ in Gross Merchandise Value.</li>
+        <li>Built and ran a warranty resolution process for ‘dead merchants’—vendors who vanished post-sale—managing repairs, refunds, and customer trust using only manual SQL queries and self-built workflows.</li>
+        <li>Contained a counterfeit product incident (AirPods) affecting hundreds of orders and rapidly deployed an ad hoc standard operating procedure to treat affected cases; CSAT exceeded 80%.</li>
+        <li>Led the onboarding and ramp up of 5+ new Technical Support at a SaaS (advertising tech) company; coordinating coaching sessions, shadowing plans, and performance benchmarks to ensure successful ramp up.</li>
+      </ul>
+      <br />
+
   </div>
 </section>
 
