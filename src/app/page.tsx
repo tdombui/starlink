@@ -41,7 +41,7 @@ export default function Home() {
   const activeSection = useActiveSection();
 
   return (
-<div className="grid grid-rows-[auto_1fr_auto] items-start justify-items-center min-h-screen gap-16 font-sans text-white bg-black relative">
+    <div className="bg-black w-full min-h-screen px-4 py-6 space-y-6">
       
   {/* Scrollspy Nav */}
   <nav className="fixed top-1/4 left-4 hidden sm:flex flex-col text-white z-20">
@@ -72,9 +72,9 @@ export default function Home() {
     ))}
   </div>
 </nav>
-<div className="pl-12 pr-8 sm:pl-40 md:pl-44 lg:pl-40 w-full">
+<div className="pl-8 pr-4 sm:pl-28 md:pl-18 lg:pl-2 w-full">
 
-<main className="pt-[10rem] pl-20 pr-4 sm:pl-16 max-w-3xl mx-auto">
+<main className="pt-[10rem] pl-8 pr-4 sm:pl-26 max-w-3xl mx-auto">
   
     {/* Top Navbar */}
     <nav className="fixed top-0 left-0 w-full z-40 border-b border-white/10 px-4 py-3 flex flex-col items-center text-left bg-[rgba(0,0,0,0.9)] shadow-black/60 shadow-md backdrop-blur">

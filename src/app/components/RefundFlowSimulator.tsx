@@ -14,12 +14,13 @@ interface RefundEntry {
 export default function RefundFlowSimulator() {
   const [submissions, setSubmissions] = useState<RefundEntry[]>([]);
   const [form, setForm] = useState({
-    orderId: '',
-    amount: '',
+    orderId: '' as string | number,
+    amount: '' as string | number,
     reason: 'PayPal >180 days',
     email: 'johnnyappleseed@spacex.com',
-    merchantId: ''
+    merchantId: '' as string | number
   });
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -33,10 +34,14 @@ export default function RefundFlowSimulator() {
     e.preventDefault();
     const timestamp = new Date().toLocaleString();
     const newSubmission: RefundEntry = {
-      ...form,
-      status: 'Submitted for Refund',
-      timestamp
-    };
+        orderId: Number(form.orderId),
+        amount: Number(form.amount),
+        reason: form.reason,
+        email: form.email,
+        merchantId: Number(form.merchantId),
+        status: 'Submitted for Refund',
+        timestamp
+      };
     setSubmissions([...submissions, newSubmission]);
     setForm({
       orderId: '',
@@ -62,7 +67,7 @@ export default function RefundFlowSimulator() {
       <div className="flex flex-col md:flex-row gap-6">
         {/* Module 1: Agent Input Form */}
         <div className="bg-white/5 border border-white/10 p-4 rounded-xl shadow-md max-w-xs">
-          <h3 className="text-xl font-semibold mb-2">Refund Submission Form</h3>
+          <h3 className="text-xl font-semibold mb-2">Agent Refund Form</h3>
           <form onSubmit={handleSubmit} className="space-y-2">
             <input
               name="orderId"
@@ -117,13 +122,13 @@ export default function RefundFlowSimulator() {
 
         {/* Module: Instructions */}
         <div className="bg-white/5 border border-white/10 p-4 rounded-xl shadow-md flex-1">
-          <h3 className="text-2xl font-semibold mb-2">Instructions</h3>
-          <ul className="list-disc text-sm text-white/80 pl-5 space-y-1">
-            <li>Agents fill out the refund form for failed transactions (e.g. PayPal &gt; 180 days).</li>
-            <li>Submissions appear in the Team Lead dashboard.</li>
-            <li>Team Leads review and click &#34;Process Refund&#34; after validation.</li>
-            <li>Processed refunds populate a Finance-ready spreadsheet view for vendor reconciliation.</li>
-          </ul>
+          <h3 className="text-2xl font-semibold mb-4">Instructions</h3>
+          <ol className="list-decimal text-lg text-white/80 pl-5 space-y-1">
+            <li className="mb-4">Agents fill out the refund form using the PayPal API response log.</li> 
+            <li className="mb-4">Team Leads review the submissions in the dashboard and process refunds end-of-day.</li>
+            <li className="mb-4">Management submits processed refunds (.csv) to Finance to recover from vendors every month.</li>
+
+          </ol>
         </div>
       </div>
 
@@ -134,14 +139,15 @@ export default function RefundFlowSimulator() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-white/20">
+              <th className="py-2 pr-4">Action</th>
+
                 <th className="py-2 pr-4">Order ID</th>
                 <th className="py-2 pr-4">Amount</th>
                 <th className="py-2 pr-4">Reason</th>
                 <th className="py-2 pr-4">Email</th>
                 <th className="py-2 pr-4">Merchant ID</th>
                 <th className="py-2 pr-4">Status</th>
-                <th className="py-2 pr-4">Timestamp</th>
-                <th className="py-2">Action</th>
+                <th className="py-2">Timestamp</th>
               </tr>
             </thead>
             <tbody>
@@ -149,24 +155,24 @@ export default function RefundFlowSimulator() {
                 <tr
                   key={i}
                   className={`border-b border-white/10 ${entry.processed ? 'bg-green-900/40' : ''}`}
-                >
+                >                  <td className="py-2 pr-4">
+                {!entry.processed && (
+                  <button
+                    onClick={() => processRefund(i)}
+                    className="text-sm px-2 py-1 bg-green-600 hover:bg-green-700 rounded text-white"
+                  >
+                    Process Refund
+                  </button>
+                )}
+              </td>
                   <td className="py-2 pr-4">{entry.orderId}</td>
                   <td className="py-2 pr-4">${entry.amount}</td>
                   <td className="py-2 pr-4">{entry.reason}</td>
                   <td className="py-2 pr-4">{entry.email}</td>
                   <td className="py-2 pr-4">{entry.merchantId}</td>
                   <td className="py-2 pr-4 text-yellow-400">{entry.status}</td>
-                  <td className="py-2 pr-4 text-white/70">{entry.timestamp}</td>
-                  <td className="py-2">
-                    {!entry.processed && (
-                      <button
-                        onClick={() => processRefund(i)}
-                        className="text-sm px-2 py-1 bg-green-600 hover:bg-green-700 rounded text-white"
-                      >
-                        Process Refund
-                      </button>
-                    )}
-                  </td>
+                  <td className="py-2 text-white/70">{entry.timestamp}</td>
+
                 </tr>
               ))}
             </tbody>
@@ -176,7 +182,7 @@ export default function RefundFlowSimulator() {
 
       {/* Module 3: Finance Reconciliation View */}
       <div className="bg-white/5 border border-white/10 p-4 rounded-xl shadow-md">
-        <h3 className="text-xl font-semibold mb-2">Finance Reconciliation Sheet</h3>
+        <h3 className="text-xl font-semibold mb-2">Finance Reconciliation Sheet (.csv)</h3>
         <div className="overflow-x-auto text-sm">
           <table className="w-full text-left border-collapse">
             <thead>
