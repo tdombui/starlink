@@ -561,12 +561,12 @@ This resulted in prolonged resolution times (7–14 days), excessive touch point
       View Presentation
     </a>
 
-    <a
+    {/* <a
       href="/case-study-1"
       className="rounded-full border border-white px-5 py-2 text-sm font-semibold hover:bg-white hover:text-black transition"
     >
       Bonus Case Study
-    </a>
+    </a> */}
 
     <a
       href="https://www.linkedin.com/in/tdombui"
