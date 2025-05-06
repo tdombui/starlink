@@ -1,13 +1,8 @@
 "use client";
-
 import Image from "next/image";
 import { useActiveSection } from "@/hooks/useActiveSelection";
 import LightboxImage from '@/app/components/LightboxImage';
 import RefundSimulator from '@/app/components/RefundSimulator';
-
-
-
-// import Mermaid from "@/app/components/Mermaid";
 
 function ScrollLink({
   href,
@@ -78,7 +73,8 @@ export default function Home() {
 </nav>
 <div className="pl-12 pr-8 sm:pl-40 md:pl-44 lg:pl-40 w-full">
 
-<main className="pt-[10rem] flex flex-col gap-[32px] max-w-3xl mx-auto">
+<main className="pt-[10rem] pl-20 pr-4 sm:pl-24 max-w-3xl mx-auto">
+  
     {/* Top Navbar */}
     <nav className="fixed top-0 left-0 w-full z-40 border-b border-white/10 px-4 py-3 flex flex-col items-center text-left bg-[rgba(0,0,0,0.9)] shadow-black/60 shadow-md backdrop-blur">
     <div className="flex items-center gap-3 justify-center ">
@@ -98,17 +94,50 @@ export default function Home() {
 
 
   {/* ABOUT */}
-  <section id="about" className="scroll-mt-36 w-full min-h-[80vh] max-w-screen-md text-left sm:text-left mb-8 ">
-    <h1 className="text-3xl font-bold mb-2">Who I Am</h1>
-    <p className="text-lg">
-      Customer Experience & Ops leader with a systems- and customer-first mindset.
+  <section id="about" className="scroll-mt-36 w-full min-h-[80vh] max-w-screen-md text-left mt-8">
+  <h1 className="text-4xl font-bold mb-2">Who I Am</h1>
+  <p className="text-2xl mb-6">
+    Customer Experience & Ops leader with a systems-first and customer-centric mindset.
+  </p>
+<br/>
+  <div className="flex flex-col sm:flex-row gap-6 sm:items-start">
+    {/* Image */}
+    <div className="sm:w-80 sm:h-80 w-full overflow-hidden border border-white/15 shadow-lg shrink-0">
+      <Image
+        src="/IMGP054612.png"
+        alt="Dominick Bui"
+        width={400}
+        height={400}
+        className="object-cover w-full h-full"
+      />
+    </div>
+
+    {/* First paragraph beside image */}
+    <div className="flex-1 text-xl text-white/85 leading-relaxed mt-4 sm:mt-0">
+      I’m a customer experience leader with a background in building high-performing support teams and operational systems from the ground up. At Back Market, I helped launch the U.S. support function during peak COVID, scaling a LATAM-based call center and leading programs that improved customer satisfaction, team performance, and operational clarity across regions.
+    </div>
+  </div>
+
+  {/* Remaining paragraphs below image */}
+  <div className="mt-6 text-xl text-white/85 leading-relaxed space-y-4">
+    <p>
+      From recovering $250K+ in failed PayPal refunds through a manual-first but scalable CX workflow, to launching onboarding programs, training pipelines, and QA processes that improved resolution times and reduced agent turnover, my approach combines hands-on execution with systems thinking.
     </p>
-  </section>
+    <p>
+      I’ve worked cross-functionally with Finance, Payments, Engineering, and Account Management, and I’m most energized when leading teams through ambiguity to deliver high-quality outcomes at scale.
+    </p>
+    <p>
+      I thrive in fast-paced, technical environments and bring a bias for action, clarity, and continuous improvement—especially when the stakes are high and the mission is bold.
+    </p>
+  </div>
+</section>
+
+
   <hr className="border-t border-white/50 my-12" />
 
     {/* ONBOARDING PLAN */}
     <section id="onboarding-plan" className="scroll-mt-36 w-full min-h-[80vh] max-w-screen-md text-left mb-8">
-  <h2 className="text-3xl font-semibold mb-4">First 30–60-day Plan</h2>
+  <h2 className="text-4xl font-semibold mb-4">First 30–60-day Plan</h2>
   <h3 className="text-xl font-semibold">Objectives</h3>
   <div className="text-md leading-relaxed mb-6">
   <ul className="list-disc ml-5 mt-1 text-white/60 text-base">
@@ -258,7 +287,7 @@ export default function Home() {
               <li>Review blockers, challenges, and wins.</li> 
               </ul>
             <p className="text-white">
-              3. Continue weekly team performance reviews</p>
+              3. Continue weekly team performance reviews.</p>
               <p className="text-white">4. Continue Enterprise Support Onboarding academy/process (if applicable).</p>  
               <p className="text-white">
               5. Identify areas for improvement of Onboarding documentation and update as needed.</p>
@@ -277,16 +306,18 @@ export default function Home() {
           content: 
           <>
           <p className="text-white">
-            1. Establish enterprise feedback loop and reporting cadence.</p>
-
-            <p className="text-white">2. Continue weekly syncs with leadership and direct reports.</p>
+            1. Pilot small changes to workflows or QA process.</p>
+            <ul className="list-disc ml-5 mt-1 text-white/60 text-base">
+              <li>Leverage QA insights to refine SOPs, streamline triage steps, and improve Knowledge Base clarity. Test lightweight changes to workflows or the QA rubric to reduce friction and improve resolution quality.</li> 
+              </ul>
+            <p className="text-white">2. Continue coaching with low performers and highlight quick wins in team standups.</p>
             <ul className="list-disc ml-5 mt-1 text-white/60 text-base">
               <li>Continue exploring areas for improvement and help them grow in these areas via project work, external learning, or additional mentoring.</li> 
               </ul>
-
             <p className="text-white">
-              3. Begin weekly team performance reviews</p>
-
+              3. Host sessions with team to gather feedback on onboarding, tooling, and process friction.</p>
+            <p className="text-white">
+              4. Host a short retrospective session with agents and team leads to gather feedback on onboarding, tooling, and process friction.</p>
           </>
         },
         {
@@ -337,11 +368,14 @@ export default function Home() {
 
 {/* PROGRAM SPOTLIGHT: PAYPAL REFUND FAILURES*/}
     <section id="program-spotlight" className="scroll-mt-36 w-full min-h-[80vh] max-w-screen-md text-left sm:text-left">
-      <h2 className="text-4xl font-semibold mb-1">Program Spotlight: PayPal Refund Failures</h2>      
+      <h2 className="text-4xl font-semibold mb-1">Program Spotlight</h2>
+      <br/>
+      <h3 className="text-3xl font-semibold mb-1">PayPal Transformation: On the Path to Repairing a Legacy PayPal Integration
+      </h3>       
       
       <br />
 {/* PROGRAM STATEMENT */}
-      <h3 className="text-2xl font-semibold mb-1">Problem Statement</h3>
+      <h3 className="text-2xl font-semibold mb-1">Situation</h3>
       <p className="text-md leading-relaxed mb-2">
 Due to a limitation in a legacy PayPal integration, refunds for orders older than 180 days would silently fail, leaving customers without reimbursement and agents without visibility into the failure. This resulted in prolonged resolution times (7–14 days), excessive touch points, inefficient escalations, duplicate refund attempts, elevated customer dissatisfaction, and revenue loss—creating operational inefficiencies, eroding customer trust during critical support moments, and technical debt. 
       </p>            <br />            <h3 className="text-xl font-semibold mb-1">Key metrics before program launch</h3>
@@ -350,13 +384,16 @@ Due to a limitation in a legacy PayPal integration, refunds for orders older tha
 {/* PROGRAM SCOPE AND GOAL */}
 <h3 className="text-2xl font-semibold mb-1">Program Scope and Goals</h3>
 <ul className="list-disc ml-6 text-md opacity-80 space-y-1">
-        <li>Refund customers in a timely manner: &lt; 1 day</li> 
+        <li>Refund customers in a timely manner: &lt; 1 business day</li> 
         <li>Reduce resolution time from 1-2 weeks to &lt; 2 hours</li>  
+        <li>Reduce # of touchpoints/interactions between customer and agent</li> 
         <li>Eliminate errors and unnecessary escalations</li> 
         <li>Create a streamlined process that addresses customer issue, validates refund failure, documents and logs refund failure, and prepares refund in one step</li>  
+        <li>Align with Finance and Account Management to reconcile funds from vendor</li>  
       </ul>
       <br />
-
+      <RefundSimulator />
+      <br />
 {/* PROGRAM SCOPE AND GOAL */}
 <h3 className="text-2xl font-semibold mb-1">Design, Build, and Testing</h3>
   <ul className="list-disc ml-6 text-md opacity-80 space-y-1">
@@ -366,8 +403,7 @@ Due to a limitation in a legacy PayPal integration, refunds for orders older tha
       <li><a className="font-black">Testing & Iteration</a>: Soft launch with a small group of agents. Gathered feedback to refine the form structure, error handling, and agent instructions. Simplified input fields, clarified edge cases, and confirmed the process aligned with Finance’s requirements.</li>  
     </ul>
       <br/>
-      <RefundSimulator />
-      <br />
+
             {/* TIMELINE */}
             <h3 className="text-xl font-semibold mb-1">Timeline (from Discovery to Launch)</h3>
       <LightboxImage src="/viz/gantt.png" alt="PayPal Workflow" /> <ul className="list-disc ml-6 text-md opacity-80 space-y-1 mt-2">
@@ -394,6 +430,7 @@ Due to a limitation in a legacy PayPal integration, refunds for orders older tha
         <li>Average resolution time: &lt; 1 hour</li> 
         <li>Average refund time: &lt; 1 business day</li> 
         <li>Touchpoints per ticket: Reduced by 95%+</li> 
+        <li>First response time: Reduced by 75%+. What was once a high-effort edge case became a low-hanging fruit for agents.</li> 
         <li>CSAT for these tickets: consistently 85%+, with significant improvement to customer trust</li>
         <li>Eliminated errors (duplicate payments) and the need for escalation</li>
         <li>Payments processed by team were recovered by Finance from vendors per payout period</li>
@@ -425,7 +462,6 @@ Due to a limitation in a legacy PayPal integration, refunds for orders older tha
       <h3 className="text-2xl font-semibold mb-1">Responsibilities</h3>
 <ul className="list-disc ml-6 text-md opacity-80 space-y-1">
         <li><a className="font-black">Discovery and data analysis</a>. Investigated refund-related tickets and PayPal transaction logs to identify systemic failure points. Quantified the financial impact and mapped user pain points across the CX journey.
-
 </li> 
         <li><a className="font-black">Process design and workflow mapping</a>. Designed a step-by-step internal process to detect, confirm, and recapture failed PayPal refunds. The workflow balanced technical accuracy (API validation) with operational simplicity.</li>  
         <li><a className="font-black">Form and workflow creation</a>. Built a no-code internal form for agents to flag failed PayPal refunds, log transactions, and notify the right leads—minimizing touch points, escalations, and reducing resolution time.</li> 
@@ -450,7 +486,7 @@ Due to a limitation in a legacy PayPal integration, refunds for orders older tha
 
   <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6">
     <a
-      href="/Dominick_Starlink_Presentation.pdf"
+      href="/dominick_bui-starlink-prez-2025.pdf"
       target="_blank"
       rel="noopener noreferrer"
       className="rounded-full bg-white text-black px-5 py-2 text-sm font-semibold hover:bg-gray-200 transition"
