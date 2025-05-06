@@ -484,13 +484,15 @@ Due to a limitation in a legacy PayPal integration, refunds for orders older tha
         <li><a className="font-black">Form and workflow creation</a>. Built a no-code internal form for agents to flag failed PayPal refunds, log transactions, and notify the right leads—minimizing touch points, escalations, and reducing resolution time.</li> 
         <li><a className="font-black">Knowledge Base and training material</a>. Created agent-facing documentation with clear SOPs, troubleshooting guidance, and refund handling examples. Also created enablement decks and led live training sessions.
 </li> 
-        <li><a className="font-black">Soft launch</a>. Released the workflow to team leads and a pilot group of agents. Collected qualitative feedback, identified friction points, and iterated quickly to refine usability before full rollout.
+<li><a className="font-black">Launch</a>. Soft launch with team leads and a pilot group of agents. Collected qualitative feedback, identified friction points, and got executive sign-off for full launch.
+</li>  
+        {/* <li><a className="font-black">Launch</a>. Released the workflow to team leads and a pilot group of agents. Collected qualitative feedback, identified friction points, and iterated quickly to refine usability before full rollout.
 </li>  
         <li><a className="font-black">Full launch</a>. Rolled out the process across the CX team. Established team norms, escalations paths, and a daily operational rhythm to ensure smooth execution at scale.
+</li>  */}
+        <li><a className="font-black">Ongoing monitoring</a>. Built a lightweight tracking method to monitor flagged refunds and processing status.
 </li> 
-        <li><a className="font-black">Ongoing monitoring</a>. Built a lightweight tracking method to monitor flagged refunds, processing status, and merchant recapture performance. Used weekly reviews to optimize efficiency.
-</li> 
-        <li><a className="font-black">Alignment with Finance and Account Management</a>. Partnered with Finance to ensure failed refunds were reconciled with vendors. Also worked with Account Management to inform vendors of systemic refund failures and the new recovery process that will be deducted from their payouts.
+        <li><a className="font-black">Alignment with Finance and Account Management</a>. Partnered with Finance to ensure failed refunds were recovered from vendors. Also synced with Account Management to inform vendors of systemic refund failures and the new recovery process.
 </li> 
       </ul>
       <br />
