@@ -14,7 +14,7 @@ export default function PaypalApiLogAccordion({
     : '2023-09-04T10:32:17Z';
 
   const logData = `{
-  "payee_id": "95488",
+  "merchant_payee_id": "95488",
   "transaction_id": "9AG18374",
   "status": "FAILED",
   "error_code": "REFUND_FAILED",

@@ -191,6 +191,7 @@ export default function RefundFlowSimulator() {
                 <th className="py-2 pr-4">Amount</th>
                 <th className="py-2 pr-4">Email</th>
                 <th className="py-2 pr-4">Merchant ID</th>
+                <th className="py-2 pr-4">Reason</th>
                 <th className="py-2 pr-4">Timestamp</th>
               </tr>
             </thead>
@@ -201,6 +202,8 @@ export default function RefundFlowSimulator() {
                   <td className="py-2 pr-4">${entry.amount}</td>
                   <td className="py-2 pr-4">{entry.email}</td>
                   <td className="py-2 pr-4">{entry.merchantId}</td>
+                  <td className="py-2 pr-4">{entry.reason}</td>
+
                   <td className="py-2 pr-4 text-white/70">{entry.timestamp}</td>
                 </tr>
               ))}
