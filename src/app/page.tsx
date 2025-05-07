@@ -139,7 +139,7 @@ export default function Home() {
         <li>Launched and scaled a BPO call center from 0 to 60+ agents at Back Market during peak COVID; maintained &gt; 80% CSAT across 1,000+ daily tickets while reducing agent turnover to &lt; 35%.</li> 
         <li>Reduced false-positive product returns by 5–7% (impacting $30K–$60K/month in GMV) by partnering with QA, Training and Engineering to create internal tooling and Knowledge Base, customer-facing guides, and an agent training module.</li>
         <li>Led promotional sale with Sony partnership during Black Friday—all 1,300 units sold out in 2 weeks and generated $220,000+ in Gross Merchandise Value (GMV).</li>
-        <li>Built and ran a warranty resolution process for ‘dead merchants’—vendors who vanished post-sale—managing repairs, refunds, and customer trust using only manual SQL queries and self-built workflows.</li>
+        <li>Built and ran a warranty resolution process for ‘Dead Merchants’—vendors who suddenly vanished from the platform with active warranties still on their orders—managing repairs, refunds, and customer trust using only manual SQL queries and self-built workflows.</li>
         <li>Contained a counterfeit product incident (AirPods) affecting hundreds of orders and rapidly deployed an ad hoc standard operating procedure to treat affected cases; CSAT exceeded 80%.</li>
         <li>Led the onboarding and ramp up of a new Technical Support team at a SaaS (advertising tech) company; coordinating coaching sessions, shadowing plans, and performance benchmarks to ensure successful ramp up.</li> 
       </ul>
