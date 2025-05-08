@@ -140,7 +140,6 @@ export default function RefundFlowSimulator() {
             <thead>
               <tr className="border-b border-white/20">
               <th className="py-2 pr-4">Action</th>
-
                 <th className="py-2 pr-4">Order ID</th>
                 <th className="py-2 pr-4">Amount</th>
                 <th className="py-2 pr-4">Reason</th>

@@ -5,6 +5,7 @@ import { Trophy, Rocket } from "lucide-react";
 import LightboxImage from '@/app/components/LightboxImage';
 import RefundSimulator from '@/app/components/RefundSimulator';
 import RefundFlowSimulator from '@/app/components/RefundFlowSimulator';
+// import RefundFlowSnapshot from '@/app/components/RefundFlowSnapshot';
 
 function ScrollLink({
   href,
@@ -479,7 +480,8 @@ This resulted in prolonged resolution times (7–14 days), excessive touch point
       <br />
       <h3 className="text-xl font-semibold mb-1">Creating a streamlined workflow</h3>
       <RefundFlowSimulator /> 
-      <br/>
+            <br />
+            {/* <RefundFlowSnapshot /> */}
       <br/>
 
 <LightboxImage src="/viz/paypal-flow-after.png" alt="PayPal Workflow"  />
