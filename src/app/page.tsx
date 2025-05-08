@@ -395,7 +395,7 @@ export default function Home() {
           )
         },
       ].map(({ week, title, content }) => (
-        <div key={week} className="relative mb-10 flex items-start">
+        <div key={week} className="relative mb-6 flex items-start">
           {/* Dot intersects line */}
           <div className="absolute -left-[43px] top-1.5">
             <div className="w-4 h-4 bg-white border-2 border-black rounded-full" />
@@ -405,10 +405,16 @@ export default function Home() {
             <p className="text-base sm:text-xl font-bold text-white underline">{title}</p>
             <div className="text-base sm:text-lg text-white/70">{content}</div>
           </div>
+      
         </div>
       ))}
+                
     </div>
-  </div>
+            </div>
+            <div className="text-md leading-relaxed mb-6">
+<br/>
+            Of course this is a tentative plan and will be adapted based on the most urgent needs of Leadership and the team. My topmost priority in the first few weeks is to build trust, understand how the team works, and meet them where they are—so I can support them effectively and be their biggest advocate. From there, it’s about making sure we hit our KPIs and SLAs—and ideally, exceed them. But more than that, I want to help foster an environment where the team feels energized and proud of their work, not just productive. When people are connected to the mission and to each other, they naturally perform at their best—and that’s the kind of environment I’ll work tirelessly to build.            </div>
+
 </section>
 
     <hr className="border-t border-white/50 my-12" />
