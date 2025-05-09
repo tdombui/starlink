@@ -566,7 +566,15 @@ This resulted in prolonged resolution times (7–14 days), excessive touch point
       rel="noopener noreferrer"
       className="rounded-full bg-white text-black px-5 py-2 text-sm font-semibold hover:bg-gray-200 transition"
     >
-      View Presentation
+      View .pdf Presentation
+    </a>
+    <a
+      href="/dominick_bui-starlink-prez-2025.pptx"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full bg-white text-black px-5 py-2 text-sm font-semibold hover:bg-gray-200 transition"
+    >
+      Download .ppt Presentation 
     </a>
 
     {/* <a
